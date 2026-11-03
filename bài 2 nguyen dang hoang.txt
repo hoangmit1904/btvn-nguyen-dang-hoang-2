@@ -1,0 +1,22 @@
+Bài 2 : Sự cố phiên làm việc trên hệ thống vận tải
+phần 1. phân tích
+Browser Cache (Bộ nhớ đệm trình duyệt):
+
+Dung lượng: Lớn, thường từ vài chục MB đến hàng GB.
+
+Mục đích: Lưu trữ các tài nguyên tĩnh của trang web như hình ảnh, tệp CSS, JavaScript, video để khi người dùng tải lại trang, trình duyệt không phải tải lại từ máy chủ, giúp tăng tốc độ hiển thị.
+
+Bảo mật: Lưu trữ các tài nguyên công khai, không chứa dữ liệu định danh nhạy cảm của người dùng.
+
+HTTP Cookies:
+
+Dung lượng: Rất nhỏ, giới hạn tối đa khoảng ~4KB cho mỗi cookie.
+
+Mục đích: Chuyên dùng để lưu trữ thông tin trạng thái phiên làm việc (session state), mã xác thực (token), hoặc các thiết lập cá nhân ngắn gọn của người dùng giữa các lần gửi yêu cầu (HTTP request) lên server.
+
+Bảo mật: Có thể chứa thông tin nhạy cảm nên bắt buộc phải được bảo vệ bằng các cờ bảo mật chuyên dụng.
+***Phần 2. Triển khai***
+Cấu trúc mẩu tin Cookie mẫu (Set-Cookie Header)
+2. Giải thích chi tiết các thuộc tính
+***Phần 3. Kiểm thử***
+Trên Windows / Linux (Chrome, Edge, Firefox):Nhấn tổ hợp phím: Ctrl + F5Hoặc nhấn F12 để mở Developer Tools $\rightarrow$ Click chuột phải vào nút Reload (hình mũi tên xoay vòng cạnh thanh địa chỉ) $\rightarrow$ Chọn Empty Cache and Hard Reload.Trên macOS (Chrome, Safari):Nhấn tổ hợp phím: Cmd + Shift + R.
